@@ -51,5 +51,5 @@ function restartGame(){
 }
 
 function goHome(){
-    window.location= "game.html";
+    window.location= "home.php";
 }
