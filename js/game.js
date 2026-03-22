@@ -187,13 +187,25 @@ function endGame(result){
     localStorage.setItem("time", time);
     localStorage.setItem("grid", grid); 
 
+    let difficulty = mode; // or "Easy"/"Medium"/"Hard" based on your mapping
+    let score = correct * 10; // example, you can change scoring logic
+
+    fetch('backend/save_score.php', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: `score=${score}&moves=${moves}&time=${time}&difficulty=${difficulty}`
+    })
+    .then(response => response.text())
+    .then(data => console.log("Score saved:", data))
+    .catch(error => console.error("Error saving score:", error));
+
     window.location = "result.html";
 }
 
 
 
-function goHome(){
 
-    window.location = "home.html";
+function goHome(){
+    window.location = "home.php";
 
 }
