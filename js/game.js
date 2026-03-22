@@ -115,10 +115,19 @@ symbols.forEach(symbol=>{
 
 });
 
+const allCards = document.querySelectorAll(".card");
+allCards.forEach(card => {
+    card.innerHTML = `<i class="bi ${card.dataset.symbol}"></i>`;
+});
 
+// after 2 seconds, hide all cards
+setTimeout(() => {
+    allCards.forEach(card => {
+        card.innerHTML = ""; // flip back down
+    });
+}, 2000); // 2000 ms = 2 seconds
 
 function checkMatch(){
-
     moves++;
 
 if(mode === "moves"){
