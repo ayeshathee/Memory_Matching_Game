@@ -22,6 +22,7 @@ $level = $row['level'];
 <html>
 <head>
 <title>Memory Game</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
