@@ -10,7 +10,7 @@ mode = localStorage.getItem("mode");
 console.log(mode,typeof(mode));
 
 function goHome(){
-    window.location="home.html";
+    window.location="home.php";
 }
 
 function selectDifficulty(a){
