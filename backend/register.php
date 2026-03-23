@@ -1,20 +1,28 @@
 <?php
-include "db.php";
+session_start();
+include "db.php"; 
 
-if(isset($_POST['submit'])){
+$name = $_POST['name'] ?? '';
+$email = $_POST['email'] ?? '';
+$password = $_POST['password'] ?? '';
 
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+// check if email already exists
+$sql_check = "SELECT * FROM users WHERE email='$email'";
+$result = $conn->query($sql_check);
 
-    $sql = "INSERT INTO users (name, email, password) 
-            VALUES ('$name', '$email', '$password')";
+if($result && $result->num_rows > 0){
+    echo "email_exists";
+    exit();
+}
 
-    if($conn->query($sql) === TRUE){
-        header("Location: ../login.html");
-        exit();
-    } else {
-        echo "Error: " . $conn->error;
-    }
+// email not exists → insert new user
+$hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+$sql_insert = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$hashed_password')";
+
+if($conn->query($sql_insert)){
+    echo "success";
+} else {
+    echo "error";
 }
 ?>

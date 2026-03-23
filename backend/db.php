@@ -1,7 +1,7 @@
 <?php
 $host = "localhost";
 $user = "root";
-$password = "";
+$password = "2004";
 $database = "memory_game";
 
 $conn = new mysqli($host, $user, $password, $database);
