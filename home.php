@@ -52,13 +52,12 @@ $progress_percent = ($progress / 250) * 100; // convert to %
 </head>
 
 <body>
+<button onclick="window.location='profile.php'">My Profile</button>
 <button onclick="logout()">Logout</button>
 
 <h1>Memory Game</h1>
 
 <h2>Welcome <?php echo $_SESSION['user_name']; ?></h2>
-
-<p>Total Score: <?php echo $total_score; ?></p>
 
 <p>Level: <?php echo $level; ?></p>
 
@@ -78,6 +77,7 @@ $progress_percent = ($progress / 250) * 100; // convert to %
 <br><br>
 
 <button onclick="selectMode('moves')">Limited Moves</button>
+<br><br>
 
 <script src="js/home.js"></script>
 </body>
