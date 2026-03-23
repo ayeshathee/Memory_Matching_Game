@@ -18,5 +18,12 @@ function selectDifficulty(a){
     window.location="game.html";
 }
 
+function logout(){
+    console.log("Logout clicked");
+    window.location = "backend/logout.php";
+}
+
 grid = localStorage.getItem("grid");
 console.log(grid,typeof(grid));
+
+console.log("home.js loaded");

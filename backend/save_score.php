@@ -22,14 +22,9 @@ if(isset($_POST['score'], $_POST['moves'], $_POST['time'], $_POST['difficulty'])
 
     // Update total score
     $update_sql = "UPDATE users 
-                   SET total_score = total_score + $score,
-                       level = CASE
-                           WHEN total_score + $score < 101 THEN 1
-                           WHEN total_score + $score < 301 THEN 2
-                           WHEN total_score + $score < 601 THEN 3
-                           ELSE 4
-                       END
-                   WHERE id = $user_id";
+               SET total_score = total_score + $score,
+                   level = FLOOR((total_score + $score) / 250) + 1
+               WHERE id = $user_id";
 
     if($conn->query($update_sql) === TRUE){
         echo "Score & level updated!";
