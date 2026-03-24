@@ -15,7 +15,7 @@ if($result && $result->num_rows > 0){
     exit();
 }
 
-// email not exists → insert new user
+// email not exists insert new user
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
 $sql_insert = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$hashed_password')";
