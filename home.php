@@ -28,36 +28,17 @@ $progress_percent = ($progress / 250) * 100; // convert to %
 <title>Memory Game</title>
 <link rel="stylesheet" href="css/style.css">
 
-<style>
-.progress-container {
-    
-    width: 300px;
-    background: #ddd;
-    border-radius: 20px;
-    overflow: hidden;
-    margin: 10px auto;
-}
-
-.progress-bar {
-    height: 20px;
-    background: linear-gradient(to right, #00c853, #64dd17);
-    text-align: center;
-    color: white;
-    font-size: 12px;
-    line-height: 20px;
-    transition: width 0.5s;
-}
-</style>
-
 </head>
 
 <body>
-<button onclick="window.location='profile.php'">My Profile</button>
+<br>
+<button style="margin-right: 250px;" onclick="window.location='profile.php'">My Profile</button>
 <button onclick="logout()">Logout</button>
+<br><br>
 
-<h1>Memory Game</h1>
-
-<h2>Welcome <?php echo $_SESSION['user_name']; ?></h2>
+<h1>Memory Matching Game</h1>
+<br>
+<h3>Welcome <?php echo $_SESSION['user_name']; ?></h3>
 
 <p>Level: <?php echo $level; ?></p>
 
@@ -67,7 +48,7 @@ $progress_percent = ($progress / 250) * 100; // convert to %
         <?php echo $progress; ?>/250
     </div>
 </div>
-
+<br><br>
 <p>Select a mode</p>
 
 <button onclick="selectMode('normal')">Normal Mode</button>

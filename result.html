@@ -5,10 +5,49 @@
 <meta charset="UTF-8">
 <title>Game Result</title>
 <link rel="stylesheet" href="css/style.css">
+<style>
+/* Result Page Container */
+.result-container {
+    max-width: 700px;      /* wider container */
+    margin: 50px auto;     /* centered with some top spacing */
+    padding: 30px;         /* more padding */
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+/* Paragraphs */
+.result-container p {
+    font-size: 20px;       /* bigger text */
+    margin: 15px 0;        /* space between paragraphs */
+    line-height: 1.5;      /* easier to read */
+}
+
+/* Buttons in Result Page */
+.result-container button {
+    width: 100%;           /* full container width */
+    padding: 16px 0;       /* taller button */
+    margin: 10px 0;        /* space between buttons */
+    font-size: 18px;       /* bigger text */
+    border-radius: 12px;   /* rounded corners */
+    font-weight: bold;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.result-container button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, #0072ff, #00c6ff);
+}
+</style>
 </head>
 
 <body>
-
+<div class="result-container">
 <h1>Game Result</h1>
 
 <p>Stars: <span id="stars"></span></p>
@@ -26,6 +65,7 @@
 <button onclick="restartGame()">Try Again</button>
 <br><br>
 <button onclick="goHome()">Back to Menu</button>
+</div>
 
 <script src="js/result.js"></script>
 
