@@ -36,16 +36,44 @@ $history_result = $conn->query($history_sql);
 <title>My Profile</title>
 
 <style>
+.btn-home {
+    position: fixed;
+    top: 50px;
+    left: 400px;
+
+    padding: 12px 25px;     
+    font-size: 16px;          
+    font-weight: bold;
+    
+    background-color: #007BFF;
+    color: white;            
+    border: none;             
+    border-radius: 8px;      
+    cursor: pointer;            
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+.btn-home:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); 
+}
+
+.btn-home:active {
+    transform: translateY(1px); 
+}
+
+
 body {
     font-family: Arial;
-    background: #f4f4f4;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); 
     text-align: center;
 }
 
 .container {
     width: 80%;
     margin: auto;
-    background: white;
+    background: #42996D;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px gray;
@@ -54,7 +82,7 @@ body {
 /* Progress Bar */
 .progress-container {
     width: 300px;
-    background: #ddd;
+    background: white;
     border-radius: 20px;
     margin: 10px auto;
     overflow: hidden;
@@ -63,7 +91,7 @@ body {
 .progress-bar {
     height: 20px;
     background: linear-gradient(to right, #00c853, #64dd17);
-    color: white;
+    color: black;
     font-size: 12px;
     line-height: 20px;
 }
@@ -76,7 +104,7 @@ table {
 }
 
 table, th, td {
-    border: 1px solid #ccc;
+    border: 1px solid black;
 }
 
 th {
@@ -88,19 +116,6 @@ td, th {
     padding: 10px;
 }
 
-/* Buttons */
-button {
-    padding: 10px 15px;
-    margin-top: 15px;
-    border: none;
-    background: #007BFF;
-    color: white;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #0056b3;
-}
 </style>
 
 </head>
@@ -124,9 +139,10 @@ button:hover {
     </div>
 
     <p><?php echo 250 - $progress; ?> points to next level</p>
+    <br>
 
     <!-- Game History -->
-    <h3>Game History</h3>
+    <h2>Game History</h2>
 
     <table>
         <tr>
@@ -154,8 +170,7 @@ button:hover {
         ?>
     </table>
 
-    <!-- Back Button -->
-    <button onclick="window.location='home.php'">Back to Home</button>
+    <button class="btn-home" onclick="window.location='home.php'">Back to Home</button>
 
 </div>
 

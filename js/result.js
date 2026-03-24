@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("finalMoves").innerText = moves;
     document.getElementById("finalTime").innerText = time;
 
-    // Score calculation (10 points per correct, minus 1 per incorrect)
+    // Score calculation 
     let score = (correct * 10) - incorrect;
     if(score < 0) score = 0;
     document.getElementById("score").innerText = score;
@@ -26,23 +26,23 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     else{
         if(grid === 2){
-            if(moves <= 3) stars = "⭐⭐⭐";
-            else if(moves <= 5) stars = "⭐⭐";
-            else stars = "⭐";
+            if(moves <= 3) stars ='<i class="bi bi-star-fill">  </i>'.repeat (3);
+            else if(moves <= 5) stars = '<i class="bi bi-star-fill">  </i>'.repeat ();
+            else stars = '<i class="bi bi-star-fill"></i>';
         }
         if(grid === 4){
-            if(moves <= 20) stars = "⭐⭐⭐";
-            else if(moves <= 30) stars = "⭐⭐";
-            else stars = "⭐";
+            if(moves <= 20) stars = '<i class="bi bi-star-fill">  </i>'.repeat (3);
+            else if(moves <= 30) stars = '<i class="bi bi-star-fill">  </i>'.repeat (2);
+            else stars = '<i class="bi bi-star-fill"></i>';
         }
         if(grid === 6){
-            if(moves <= 60) stars = "⭐⭐⭐";
-            else if(moves <= 100) stars = "⭐⭐";
-            else stars = "⭐";
+            if(moves <= 60) stars = '<i class="bi bi-star-fill">  </i>'.repeat (3);
+            else if(moves <= 100) stars = '<i class="bi bi-star-fill">  </i>'.repeat (2);
+            else stars = '<i class="bi bi-star-fill"></i>';
         }
     }
 
-    document.getElementById("stars").innerText = stars;
+    document.getElementById('stars').innerHTML = stars;
 
 });
 

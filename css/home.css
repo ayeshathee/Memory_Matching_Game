@@ -1,0 +1,58 @@
+.mode-container {
+    display: flex;
+    justify-content: center;
+    gap: 75px; 
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+
+.mode-card {
+    width: 260px;              
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+
+.mode-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.mode-card .icon {
+    font-size: 55px;  
+    margin-bottom: 15px;
+}
+
+.mode-card h3 {
+    margin: 10px 0;
+    font-size: 24px;  
+    font-weight: bold;
+}
+
+.mode-card p {
+    font-size: 16px;   
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+
+.mode-card button {
+    width: 90%;
+    padding: 14px;
+    font-size: 16px;   
+    border-radius: 10px;
+}
+
+.back-btn {
+    position: fixed;
+    top: 40px;
+    left: 300px;
+    padding: 12px 22px;
+    font-size: 24px;
+    border-radius: 8px;
+}
