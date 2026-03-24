@@ -3,24 +3,43 @@
 
 <head>
 <title>Select Difficulty</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/home.css">
 </head>
 
 <body>
 <br><br>
-<button onclick="goHome()">Back</button>
+<button class="back-btn" onclick="goHome()"><i class="bi bi-arrow-left"></i> Back</button>
 <br><br>
 <h1>Select Difficulty</h1>
-<br><br>
-<p>Choose a grid size</p>
+<br><br><br>
+<h3>Choose a grid size</h3>
 
-<button onclick="selectDifficulty(2)">2x2 Grid - Tutorial</button>
-<br><br>
+<div class="mode-container">
 
-<button onclick="selectDifficulty(4)">4x4 Grid - Beginner</button>
-<br><br>
+    <div class="mode-card">
+        <div class="icon"><i class="bi bi-star"></i></div>
+        <h3>2x2 Grid</h3>
+        <p>Tutorial level for beginners</p>
+        <button onclick="selectDifficulty(2)">Select</button>
+    </div>
 
-<button onclick="selectDifficulty(6)">6x6 Grid - Expert</button>
+    <div class="mode-card">
+        <div class="icon"><i class="bi bi-star"></i>  <i class="bi bi-star"></i></div>
+        <h3>4x4 Grid</h3>
+        <p>Beginner friendly challenge</p>
+        <button onclick="selectDifficulty(4)">Select</button>
+    </div>
+
+    <div class="mode-card">
+        <div class="icon"><i class="bi bi-star"></i>  <i class="bi bi-star"></i>  <i class="bi bi-star"></i></div>
+        <h3>6x6 Grid</h3>
+        <p>Expert level difficulty</p>
+        <button onclick="selectDifficulty(6)">Select</button>
+    </div>
+</div>
+
 <script src="js/home.js"></script>
 </body>
 </html>

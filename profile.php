@@ -41,26 +41,26 @@ $history_result = $conn->query($history_sql);
     top: 50px;
     left: 400px;
 
-    padding: 12px 25px;       /* better spacing inside */
-    font-size: 16px;           /* readable text */
+    padding: 12px 25px;     
+    font-size: 16px;          
     font-weight: bold;
     
-    background-color: #007BFF; /* professional blue */
-    color: white;               /* text color */
-    border: none;               /* remove default border */
-    border-radius: 8px;         /* smooth rounded corners */
-    cursor: pointer;            /* pointer on hover */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* subtle shadow */
+    background-color: #007BFF;
+    color: white;            
+    border: none;             
+    border-radius: 8px;      
+    cursor: pointer;            
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
     transition: background-color 0.3s, transform 0.2s;
   }
 
 .btn-home:hover {
-    background-color: #0056b3; /* darker blue on hover */
-    transform: translateY(-2px); /* slight lift effect */
+    background-color: #0056b3;
+    transform: translateY(-2px); 
 }
 
 .btn-home:active {
-    transform: translateY(1px); /* button press effect */
+    transform: translateY(1px); 
 }
 
 
@@ -91,7 +91,7 @@ body {
 .progress-bar {
     height: 20px;
     background: linear-gradient(to right, #00c853, #64dd17);
-    color: white;
+    color: black;
     font-size: 12px;
     line-height: 20px;
 }
@@ -170,7 +170,6 @@ td, th {
         ?>
     </table>
 
-    <!-- Back Button -->
     <button class="btn-home" onclick="window.location='home.php'">Back to Home</button>
 
 </div>

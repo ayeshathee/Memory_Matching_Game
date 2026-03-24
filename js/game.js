@@ -60,7 +60,7 @@ if(mode === "moves"){
 }
 
 
-let time = 0; // tracks elapsed time
+let time = 0; 
 let timer = setInterval(() => {
 
     if (mode === "time") {
@@ -68,15 +68,14 @@ let timer = setInterval(() => {
         let remaining = timeLimit - time;
         document.getElementById("time").innerText = remaining;
 
-        time++; // increment elapsed time for storing in result
+        time++; 
 
         if (remaining <= 0) {
             clearInterval(timer);
-            endGame("lose"); // time over
+            endGame("lose"); 
         }
 
     } else {
-        // normal or moves mode → count up
         time++;
         document.getElementById("time").innerText = time;
     }
@@ -123,9 +122,9 @@ allCards.forEach(card => {
 // after 2 seconds, hide all cards
 setTimeout(() => {
     allCards.forEach(card => {
-        card.innerHTML = ""; // flip back down
+        card.innerHTML = ""; 
     });
-}, 2000); // 2000 ms = 2 seconds
+}, 2000); 
 
 function checkMatch(){
     moves++;
@@ -196,8 +195,8 @@ function endGame(result){
     localStorage.setItem("time", time);
     localStorage.setItem("grid", grid); 
 
-    let difficulty = mode; // or "Easy"/"Medium"/"Hard" based on your mapping
-    let score = correct * 10; // example, you can change scoring logic
+    let difficulty = mode; 
+    let score = correct * 10; 
 
     fetch('backend/save_score.php', {
         method: 'POST',
