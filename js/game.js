@@ -198,7 +198,7 @@ function endGame(result){
     let difficulty = mode; 
     let score = correct * 10; 
 
-    fetch('backend/save_score.php', {
+    fetch('includes/save_score.php', {
         method: 'POST',
         headers: {'Content-Type': 'application/x-www-form-urlencoded'},
         body: `score=${score}&moves=${moves}&time=${time}&difficulty=${difficulty}`

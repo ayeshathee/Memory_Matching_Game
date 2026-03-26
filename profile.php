@@ -1,9 +1,9 @@
 <?php
 session_start();
-include "backend/db.php";
+include "includes/db.php";
 
 if(!isset($_SESSION['user_id'])){
-    header("Location: login.html");
+    header("Location: auth/login.php");
     exit();
 }
 
