@@ -77,6 +77,13 @@ button:hover {
     background: rgba(255,255,255,0.35);
 }
 
+/* Green color for matched cards */
+.correct-match {
+    background-color: #28a745; 
+    color: white;
+    border: 2px solid #218838; 
+}
+
 /* Progress Bar */
 .progress-container {
     width: 350px;

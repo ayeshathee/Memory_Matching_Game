@@ -152,6 +152,9 @@ if(mode === "moves" && moves > moveLimit){
         correct++;
         document.getElementById("correct").innerText = correct;
 
+        firstCard.classList.add("correct-match");
+        secondCard.classList.add("correct-match");
+
         firstCard = null;
         secondCard = null;
 

@@ -37,7 +37,7 @@ $progress_percent = ($progress / 250) * 100;
 <br>
 <button style="margin-right: 750px;" onclick="window.location='profile.php'">My Profile</button>
 <button onclick="window.location='contact.php'">Contact Us</button>
-<button onclick="logout()" style="position:fixed; top: 20px; right: 20px;">Logout</button>
+<button onclick="logout()" style="position:fixed; top: 20px; right: 20px; background:#f44336">Logout</button>
 <h2>Welcome <?php echo $_SESSION['user_name']; ?></h2>
 
 <p>Level: <?php echo $level; ?></p>
