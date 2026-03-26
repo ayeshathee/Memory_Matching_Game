@@ -152,6 +152,9 @@ if(mode === "moves" && moves > moveLimit){
         correct++;
         document.getElementById("correct").innerText = correct;
 
+        firstCard.classList.add("correct-match");
+        secondCard.classList.add("correct-match");
+
         firstCard = null;
         secondCard = null;
 
@@ -198,7 +201,7 @@ function endGame(result){
     let difficulty = mode; 
     let score = correct * 10; 
 
-    fetch('backend/save_score.php', {
+    fetch('includes/save_score.php', {
         method: 'POST',
         headers: {'Content-Type': 'application/x-www-form-urlencoded'},
         body: `score=${score}&moves=${moves}&time=${time}&difficulty=${difficulty}`

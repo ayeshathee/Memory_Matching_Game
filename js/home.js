@@ -6,8 +6,6 @@ function selectMode(m){
     window.location="difficulty.html";
 }
 
-mode = localStorage.getItem("mode");
-console.log(mode,typeof(mode));
 
 function goHome(){
     window.location="home.php";
@@ -19,11 +17,5 @@ function selectDifficulty(a){
 }
 
 function logout(){
-    console.log("Logout clicked");
-    window.location = "backend/logout.php";
+    window.location = "auth/logout.php";
 }
-
-grid = localStorage.getItem("grid");
-console.log(grid,typeof(grid));
-
-console.log("home.js loaded");
