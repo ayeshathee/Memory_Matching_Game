@@ -74,7 +74,7 @@ input, textarea {
     outline: none;
     font-size: 18px;
     background-color: rgb(255, 255, 255); 
-    color: white;
+    color: black;
 }
 
 
